@@ -1,0 +1,14 @@
+node_modules
+.idea/
+npm-debug.log
+.ide
+dump.rdb
+vendor
+/upload/
+/tmp/*
+/public/cache/*
+/cache/*
+.nodemonignore
+/app/carpet/**
+**/dist/
+
