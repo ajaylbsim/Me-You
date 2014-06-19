@@ -1,6 +1,7 @@
 .idea/
 npm-debug.log
 .ide
+node_modules
 dump.rdb
 vendor
 /upload/
