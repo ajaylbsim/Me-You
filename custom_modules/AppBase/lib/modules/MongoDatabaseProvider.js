@@ -7,7 +7,8 @@
     var path = require('path');
     var fs = require('fs');
     var mongoose = require("mongoose");
-    this.connection = mongoose.createConnection( process.env.MONGOHQ_URL);
+    console.log(process.env.MONGOHQ_URL)
+    this.connection = mongoose.connect( process.env.MONGOHQ_URL);
     this.connection.on('error', function () {
         log.error(arguments);
         if (_config.dataSource.mongo.ignoreConnectionError) callback(_this);
