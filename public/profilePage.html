@@ -1,0 +1,295 @@
+<div id="profileImgDiv" class="col-md-8 " ng-style="image_path != '' && {'background-image':'url('+user.coverImgId+')'}">
+<div></div>
+    <div  class="profilePic">
+
+        <img STYLE="margin-top: -13px"
+             alt="Hello Ajay !!"
+             ng-src={{user.profilePic}}
+             onerror="ajay.JPG"
+             src="">
+
+            <div  ng-app="customDirectives"  style="color: white;
+width: 71px;
+height: 28px;
+z-index: 200;
+margin-top: -71px;
+font-size: 12px;
+border: 0px;
+margin-left: 107px">
+                <div> <span custom-popover popover-html="Some Popover Text" popover-placement="bottom"
+                            style="background-color: #000000" popover-label="change"></span>
+
+                </div>
+            </div>
+        </img>
+        <p style="position: absolute; top: 120px; width: 500px; padding-left: 30px;">
+
+            {{user.name}}<br>
+
+        </p>
+    </div>
+</div>
+<div></div>
+<div class="white-bg clearfix ng-scope" >
+    <div class="container my-page edit">
+        <div class="row  vertical-border-2col">
+    <div class="span4 width280"></div>
+            <div class="span8 mleft80 width580"></div>
+
+
+    </div>
+    </div>
+</div>
+<div class="white-bg clearfix ng-scope">
+    <div class="container my-page edit">
+        <div class="row  vertical-border-2col">
+    <div class="span4 width280" style=" height: 300px; float:left">
+        <h5 class="brd-btm">Interests
+   </h5>
+
+        <ul class="interests-list" style="text-align:left">
+            <li>
+                <h5  ><a href="javascript:void(0)" ng-hide="editInterest.music " ng-click="editInterest.music = true" class="edit-link">Edit</a> <span class=" glyphicon glyphicon-music" style="padding-right: 15px"></span>Favourite music</h5>
+                        <span class="interest" ng-hide="editInterest.music">
+                            You have no Interest in This Category
+                        </span>
+                <p ng-hide="editInterest.music" class=""><a href="javascript:void(0)" data-ng-click="showOrHideInterests('music')">
+                    <span ng-show="userInterests['music'].length&gt;0 &amp;&amp; userInterests['music'].length == interestLimits['music']" class="ng-hide">Show Less</span>
+                    <span ng-show="userInterests['music'].length &gt; interestLimits['music']" class="ng-binding ng-hide">+0</span>
+                </a> </p>
+                <div class="edit-section clearfix ng-hide" ng-show="editInterest.music">
+                    <textarea rows="1" cols="1" placeholder="add some music list to your favourite !!!!!!" id="music2" class="ng-binding"></textarea>
+                    <div class="action clearfix">
+                        <a href="javascript:void(0)" class="white-btn"  style="margin-left: -8px"data-ng-click="editInterest.music=false">Cancel</a>
+                        <input type="submit" value="Save changes" class="green-btn" >
+                    </div>
+                </div>
+            </li>
+   <li>
+                <h5><a href="javascript:void(0)" ng-hide="editInterest.book " ng-click="editInterest.book = true" class="edit-link">Edit</a> <span class=" glyphicon glyphicon-book"style="padding-right: 15px" ></span>Favourite book</h5>
+                        <span class="interest" ng-hide="editInterest.book">
+                            You have no Interest in This Category
+                        </span>
+                <p ng-hide="editInterest.book" class=""><a href="javascript:void(0)" data-ng-click="showOrHideInterests('book')" ng-show="editInterest.book">
+                    <span ng-show="userInterests['book'].length&gt;0 &amp;&amp; userInterests['music'].length == interestLimits['book']" class="ng-hide">Show Less</span>
+                    <span ng-show="userInterests['book'].length &gt; interestLimits['book']" class="ng-binding ng-hide">+0</span>
+                </a> </p>
+                <div class="edit-section clearfix ng-hide" ng-show="editInterest.book">
+                    <textarea rows="1" cols="1" placeholder="add some books you like!!!!!!" id="music" class="ng-binding"></textarea>
+                    <div class="action clearfix">
+                        <a href="javascript:void(0)" class="white-btn" style="margin-left: -8px" data-ng-click="editInterest.book=false">Cancel</a>
+                        <input type="submit" value="Save changes" class="green-btn" >
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="span8 mleft80 width580" style=" width: 500px">
+    <div class="personal-details" style="text-align: left">
+        <div class="metadata clearfix">
+            <span class="ng-binding">24 years old
+
+                from New Delhi</span>
+            <ul style="margin-left: -54px;text-align: left ;font: -webkit-mini-control;">
+                <li class="ng-binding"><span class="icon location"></span>Is currently in Delhi.</li>
+                <li><span class="icon online"></span><span code="i18n.common.online">Online</span> </li>
+                <li><span class="icon choice"></span>Wants to meet <strong class="ng-binding">
+
+                    Women
+
+                </strong> between <strong class="ng-binding"> 23 and 30 years</strong> old.
+                    <a href="javascript:void(0)" class="edit-link" data-ng-click="editWantsToMeet = true">Edit</a>
+
+                    <div class="edit-section ng-hide" data-ng-show="editWantsToMeet">
+                        <span class="icon choice"></span>Wants to meet <strong class="ng-binding">
+
+                        Women
+
+                    </strong> between <strong class="ng-binding"> 23 and 30 years</strong> old.
+                        <ul>
+                            <li class="clearfix">
+                                <label>Want to meet:</label>
+                                    <span class="txt">
+                                        <span class="check-box">
+                                            <span ng-class="{'dummy-checked':female, 'dummy-checkbox':!female}" ng-click="female = !female;" class="dummy-checked"></span>
+                                            <input type="checkbox" ng-model="female" value="FEMALE" style="visibility: hidden" class="ng-pristine ng-valid">Women
+                                          </span>
+                                        <span class="check-box">
+                                            <span ng-class="{'dummy-checked':male, 'dummy-checkbox':!male}" ng-click="male = !male;" class="dummy-checkbox"></span>
+                                            <input type="checkbox" ng-model="male" value="MALE" style="visibility: hidden" class="ng-pristine ng-valid">Men
+                                          </span>
+                                    </span>
+                            </li>
+                            <li class="clearfix">
+                                <label>Age from:</label>
+                                    <span class="txt">
+                                        <input type="text" ng-model="age[0]" input-type-number="" maxlength="2" id="ageFrom" class="ng-pristine ng-valid">
+                                        <span class="w32" code="i18n.common.to">To</span>
+                                        <input type="text" ng-model="age[1]" input-type-number="" maxlength="2" id="ageTo" class="ng-pristine ng-valid">
+                                        year
+                                    </span>
+                        </ul>
+                        <div class="action clearfix">
+                            <a href="javascript:void(0)" class="white-btn" data-ng-click="editWantsToMeet = false">Cancel</a>
+                            <input type="submit" value="Save changes" class="green-btn" data-ng-click="updateWantsToMeet()">
+                        </div>
+                    </div>
+                </li>
+                   <li class="
+                   action clearfix"></li>
+                <li class=" action clearfix personal-info h5" style="color: lightcoral ;padding-left: 15px">     <h5 class="mbtm">i like music</h5></li>
+                <li class=" action clearfix personal-info h5" style="color: lightcoral; padding-left: 15px">     <h5 class="mbtm">spends time with friend</h5></li>
+                <li class=" action clearfix personal-info h5" style="color: lightcoral ;padding-left: 15px">     <h5 class="mbtm">loves coding </h5></li>
+                <li class=" action clearfix personal-info h5" style="color: lightcoral ;padding-left: 15px">     <h5 class="mbtm">try to explore things</h5></li>
+
+            </ul>
+
+
+        </div>
+    </div>
+    <div  class="personal-info"  style="text-align: left">
+    <div class="section">
+    </div>
+    <h5 class="mbtm">Facts about me</h5>
+    <ul class="facts-list" style="margin-left: -42px">
+    <li class="clearfix"><a href="javascript:void(0)" class="edit-link"  data-ng-click="editField=true">Edit</a>
+        <span class="title details-list" code="i18n.common.relationship">Relationship</span><span class="details-list ng-binding">open</span>
+        <div class="edit-section clearfix form1 select ng-hide" data-ng-show="editField" style="height: 120px">
+            <span class="title" code="i18n.common.relationship">Relationship</span>
+            <div class="action">
+                <select class="select pull-left">
+                    <option value>choose-status</option>
+                    <option value="single">single</option>
+                    <option value="married">married</option>
+                    <option value="open">open</option>
+                    <option value="reserve">reserve</option>
+                </select>
+
+                <a href="javascript:void(0)" class="white-btn" ng-click="editField=false">Cancel</a>
+                <input type="submit" value="Save changes" class="green-btn" ng-click="updateField('relationship_status')">
+            </div>
+        </div>
+    </li>
+    <li class="clearfix"><a href="javascript:void(0)" class="edit-link"  data-ng-click="editField2=true">Edit</a>
+        <span class="title details-list" code="i18n.common.relationship">Relationship</span><span class="details-list ng-binding">open</span>
+        <div class="edit-section clearfix form1 select ng-hide" data-ng-show="editField2" style="height: 120px">
+            <span class="title" code="i18n.common.relationship">Relationship</span>
+            <div class="action">
+                <select class="select pull-left">
+                    <option value>choose-status</option>
+                    <option value="single">single</option>
+                    <option value="married">married</option>
+                    <option value="open">open</option>
+                    <option value="reserve">reserve</option>
+                </select>
+
+                <a href="javascript:void(0)" class="white-btn" ng-click="editField2=false">Cancel</a>
+                <input type="submit" value="Save changes" class="green-btn" ng-click="updateField('relationship_status')">
+            </div>
+        </div>
+    </li>
+    </ul>
+
+        <p></p>
+        <p data-ng-repeat="val in [1,2,3,4,5,7,8,9]">
+        <div style="height: 10px;"></div>
+      </p>
+
+        </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div id="profileImgDiv" class="col-md-8 ">
+</div>
+-->
+
+<!--
+<div class="col-md-8 " style="background-color:beige;width: 350px;height: 500px;border-right-width: 4px;
+border-right-color: red;
+border-right-style:outset">
+
+
+    <input name="file" type="file" id="uploadinput"
+           class="cloudinary-fileupload" data-cloudinary-field="image_id"
+           data-form-data=" ... html-escaped JSON data ... " ></input>
+
+    <button type="submit" id="start"class="btn btn-primary start" onclick="cool()">
+        <i class="glyphicon glyphicon-upload"></i>
+        <span>Start upload</span>
+    </button>
+
+    <ul class="nav nav2 navbar-nav">
+        <li class="interestHeading">Intrest</li>
+
+
+    </ul>
+    <ul class="nav nav2 navbar-nav" id="side-menu">
+
+        <li class="interest" style="border-bottom: 1px solid #e7e7e7; display:  table-footer-group"
+            data-ng-repeat=" hobby in ['book','music','imac','likes']">
+<span>
+<span class="glyphicon glyphicon-{{hobby}}" style="color: #000000"></span>
+   {{hobby}}
+  <div class="row" data-ng-show="status[$index]"
+       style="width: 275px;background-color:#f5f5f5;height: 108px;padding: 10px 10px 10px 10px;">
+      <div class="col-md-5 col-md-offset-0" style="padding-top: 12px;padding-left: 18px;">
+          <div><textarea style="margin-right: 109px;height: 52px;width: 232px;">
+          </textarea></div>
+          <div style="width: 232px;height: 24px;padding-top: 2px">
+              <button type="button" class="btn btn-primary btn-sm"
+                      data-ng-click="changeClass('InterestClass')">cancel
+              </button>
+              <button type="button" class="btn btn-primary btn-sm"
+                      data-ng-click="changeClass('InterestClass')">change
+              </button>
+          </div>
+      </div>
+  </div>
+</span>
+            <a data-ng-class="InterestClass" id="edit" href="" data-ng-click="update($index)"
+               style="color: blue">Edit</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-8 col-md-offset-0"
+     style="background-color:#ffffff;width: 580px;height: 500px ;padding: 0px 20px 20px 18px;">
+    <ul class="nav nav2">
+        <li class="interestHeading">Fact about you</li>
+    </ul>
+    <ul class="nav nav2" id="side-menu2">
+
+        <li class="interest" style="border-bottom: 1px solid #e7e7e7; display:  table-footer-group"
+            data-ng-repeat=" status in ['About me','I am lokking ','Fact about me']">
+            <span>
+          {{status}}
+                <div class="row" data-ng-show="personalDetails[$index]"
+                     style="width: 275px;background-color:#f5f5f5;height: 108px;padding: 10px 10px 10px 10px;">
+                    <div class="col-md-5 col-md-offset-0" style="padding-top: 12px;padding-left: 18px;">
+                        <div><textarea style="margin-right: 109px;height: 52px;width: 232px;">
+                        </textarea></div>
+                        <div style="width: 232px;height: 24px;padding-top: 2px">
+                            <button type="button" class="btn btn-primary btn-sm"
+                                    data-ng-click="changeClass('PersonalDetailsClass')">cancel
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm"
+                                    data-ng-click="changeClass('PersonalDetailsClass')">change
+                            </button>
+                        </div>
+                    </div>
+                </div></span>
+            <a data-ng-class="PersonalDetailsClass" id="edit2" href="" data-ng-click="updatePersonalDetails($index)"
+               style="color: blue">Edit</a>
+        </li>
+    </ul>
+</div>
+-->

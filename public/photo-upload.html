@@ -1,0 +1,54 @@
+<div id="direct_upload" style="margin-right: 95px;
+margin-left: -21px">
+    <h1 style="margin-left: 30px">New Photo</h1>
+    <h2>Direct upload from the browser</h2>
+    <p>You can also drag and drop an image file into the dashed area.</p>
+    <form>
+        <div class="form_line" style="margin-right: 141px">
+            <label path="title">Title:</label>
+            <div class="form_controls" style="width: 234px;
+margin-left: 46%;">
+                <input type="text" class="form-control" placeholder="Title" ng-model="title" ng-change="updateTitle()"/>
+            </div>
+        </div>
+        <div class="form_line" style="color: #000000; margin-left: -94px">
+            <label>Progress:</label>
+            <div class="form_controls">
+                <div class="upload_button_holder" style="margin-left: -67px">
+                    <a href="#" class="upload_button" style="height: 32px">Upload-single</a>
+                    <input type="file" name="file" class="cloudinary_fileupload">
+                </div>
+
+                <div class="upload_button_holder">
+                    <a href="#" class="upload_button" style="height: 32px ;width: 122px">Upload-multple</a>
+                    <input type="file" name="file" multiple="multiple"  class="cloudinary_fileupload">
+                </div>
+                <div class="status">{{status}}</div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: {{progress}}%" ng-init="progress=0"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form_line">
+            <div class="form_controls">
+                <div class="preview"></div>
+            </div>
+        </div>
+    </form>
+    <div class="info">
+        <p style="color:#000000">After upload choose from the List below</p>
+      <table>
+        <tr ng-repeat="imgUrl in photos" style="float:left">
+          <td >
+              <img STYLE=""
+                   data-ng-click="changeImg(imgUrl)"
+                   alt="Hello Ajay !!"
+                   ng-src={{imgUrl}}
+                   onerror="ajay.JPG"
+                   src=""></td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+<a href="#/profile" class="back_link">Back to profile</a>

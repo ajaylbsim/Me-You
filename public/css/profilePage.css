@@ -1,0 +1,113 @@
+.interest>a{
+
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #e66554;
+    font-size: 15px;
+    line-height: 15px;
+}
+.interest{
+
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #e66554;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+}
+.interestHeading{
+    background-color: ghostwhite;
+    font-size: 17px;
+    height: 21px;
+    font: -webkit-body;
+    font-weight: bolder;
+    color:firebrick;
+}
+
+.nav2{
+
+    border-left-style:outset;
+    border-right-width: 4px;
+
+}
+
+.beforeEdit{
+    margin-right:-267px;
+    padding-top: 4px;
+    color:blue;
+}
+.afterEdit{
+    margin-right:0px;
+    padding-top: 4px;
+    color:blue;
+
+}
+.textarea{
+background: transparent;
+}
+.navLi{
+    background-color:#000000;
+float:left;
+    margin-left:200px;
+    display: -webkit-inline-box;
+    list-style: none;
+}
+
+#profileImgDiv{
+    background-image: url('../couple3.jpg');
+    margin-top: 42px;
+    background-color:beige;
+    width: 950px;
+    height: 450px;
+    border-right-width: 4px;
+    border-right-color: darkgray;
+    border-right-style:outset;
+    border-top-width: 4px;
+    border-top-color: darkgray;;
+    border-top-style: outset;
+    border-bottom-width: 4px;
+    border-bottom-color: darkgray;;
+    border-bottom-style: outset;
+    border-left-width: 4px;
+    border-left-color: darkgray;;
+
+float: left;
+    margin-bottom:20px;
+
+}
+
+#chatImgDiv{
+    background-image: url('../couple3.jpg');
+    margin-top: 42px;
+    background-color:beige;
+    width: 950px;
+    height: 50px;
+}
+.nav .open>a:focus{
+
+    background-color: #000000;
+}
+.nav .open>a{
+    background-color:#000000;
+}
+
+
+.profilePic{
+    position: absolute;
+    z-index: 99;
+    top: -42px;
+    left: 15px;
+    height: 188px;
+    width: 188px;
+    margin-top:306px;
+}
+ul, ol {
+    list-style: none;
+}
+
+.select{
+    height: 27px;
+    margin-right: 21px;
+}
+
+

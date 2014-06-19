@@ -7,6 +7,21 @@
   },
   "dependencies": {
     "express": "3.4.8",
-    "jade": "*"
+    "extend": "*",
+    "colors": "*",
+    "passport": "*",
+    "bcrypt": "*",
+    "mongoose": "*",
+    "async": "*",
+    "bcrypt-nodejs": "*",
+    "passport-facebook": "*",
+    "fb": "*",
+    "request": "*",
+    "oauthorize": "*",
+    "socket.io": "*",
+    "cloudinary": "*",
+    "fbgraph": "*",
+    "jquery-file-upload-middleware": "*",
+     "ejs": "*"
   }
 }

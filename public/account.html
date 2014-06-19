@@ -1,0 +1,30 @@
+<div class="col-md-8 " style="background-color:beige;width: 350px;height: 500px;border-right-width: 4px;
+border-right-color: red;
+border-right-style:outset">
+    <ul class="nav" id="side-menu" data-ng-repeat="friend in friends">
+        <li style="border-bottom: 1px solid #e7e7e7;">
+            <a id="a" href=""><span class="badge ng-binding displayNoneImportant" style="background-color: green;margin-top:10px;margin-left: 5px;height: 14px;">
+                          </span>{{friend.name}}</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-12 col-md-offset-0" style="background-color:lavenderblush;width: 580px;height: 500px">
+    <div class="row"
+         style="width: 448px;background-color:#f5f5f5;height: 108px;padding: 10px 10px 10px 10px;">
+        <div class="col-md-8 col-md-offset-0" style="padding-top: 12px;padding-left: 18px;">
+            <div style="float:left"><img ng-src="http://res.cloudinary.com/hgi5i4u8v/image/upload/fl_progressive,w_48,h_48,c_thumb,g_face,e_improve/53881a67747f4210009518ea_53881a67747f4210009518ea_3TScCCgRWu7svqDFIqNhTQwEdyWifBLoMng8j4OjmI.jpg" onerror="this.src=appPage.angular.exposedRootScope.getDefaultProfileImage(50, 50);" alt="" class="img" src="http://res.cloudinary.com/hgi5i4u8v/image/upload/fl_progressive,w_48,h_48,c_thumb,g_face,e_improve/53881a67747f4210009518ea_53881a67747f4210009518ea_3TScCCgRWu7svqDFIqNhTQwEdyWifBLoMng8j4OjmI.jpg">
+            </div>
+            <div>
+                <textarea placeholder="Describe yourself with 4 words..." style="margin-right: 109px;height: 52px;width: 232px;">
+            </textarea></div>
+            <div style="width: 232px;height: 24px;padding-top: 2px">
+                <button type="button" class="btn btn-primary btn-sm"
+                        data-ng-click="">cancel
+                </button>
+                <button type="button" class="btn btn-primary btn-sm"
+                        data-ng-click="">post
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

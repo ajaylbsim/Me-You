@@ -1,0 +1,75 @@
+<html>
+<head>
+    <style>
+        .sidebar {
+            background-color: #add8e6;
+            height: 92px;
+            width: 179px;
+            margin-left: -4px;
+        }
+
+        .sideBarTop {
+            background-color: burlywood;
+            height: 41px;
+            width: 179px;
+            margin-left: -4px;
+        }
+
+        .form {
+            background-color: wheat;
+            height: 75%;
+            width: 15%;
+            margin-left: -4px;
+            float: left;
+        }
+
+        .chatBox {
+            margin-top: -133px;
+            height: 100%;
+            width: 38%;
+            margin-left: -4px;
+            float: left;
+            background-color: wheat;
+            word-break: break-word;
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+    </style>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="javascripts/chatApp.js"></script>
+</head>
+<body>
+</body>
+<div>
+
+    <div class="sideBarTop"><strong> Start your chatApp</strong></div>
+    <div class="sidebar">
+        <bold>Friends</bold>
+        <ul id="frindsList">
+
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="form">
+    <blink>cool looking</blink>
+    Enter your Name<input id="name" type="text">
+    <button id="add">addme</button>
+    <br>
+    <button id="sendInfo">saysomething</button>
+
+</div>
+
+<div class="chatBox">
+    <ul id="message">
+        <li><strong>message will be shown here</strong></li>
+
+
+    </ul>
+
+</div>
+
+</html>
