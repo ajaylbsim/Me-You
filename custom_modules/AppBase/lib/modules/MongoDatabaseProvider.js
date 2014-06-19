@@ -7,8 +7,7 @@
     var path = require('path');
     var fs = require('fs');
     var mongoose = require("mongoose");
-    this.connection = mongoose.createConnection( "mongodb://heroku:4_tI0o_dl6BM07GL1odMxnqcESXAhTE3bq1mlWGQ3nouw9wks5SMIHDEKa77qAeW4BtRtnsEJxoBgyB-3vHrRA@kahana.mongohq.com:10051/app26539068"
-, {poolSize: _config.dataSource.mongo.poolSize});
+    this.connection = mongoose.createConnection( process.env.MONGOHQ_URL);
     this.connection.on('error', function () {
         log.error(arguments);
         if (_config.dataSource.mongo.ignoreConnectionError) callback(_this);
